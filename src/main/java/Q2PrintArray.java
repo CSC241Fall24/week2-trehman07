@@ -6,8 +6,13 @@ public class Q2PrintArray {
     }
 
     private static void printRecursion(int i) {
-        // TODO: Implement the recursive method to print array elements
-        // Hint: The base case is when i <= 0
-        // Hint: Print the element before the recursive call
+        // Base case: if i is 0, printed all elements
+        if (i == 0) {
+            return;
+        }
+        
+        // call printRecursion with i-1
+        printRecursion(i - 1);
+        System.out.println(array[array.length - i]);
     }
 }
